@@ -1,0 +1,40 @@
+templates:
+
+  extended_markdown/keyword_map_v1:
+    description: "縦型キーワード表 + 体験的導入の基本プリセット"
+    requires:
+      core: "yacl.version >= 1.1"
+    apply:
+      use_logic_flags:
+        - force_gpt_to_translate_to_inferred_locale_when_lang_auto
+        - require_gpt_to_open_with_experiential_scene_element
+        - require_gpt_to_define_keyword_categories_as_logical_facets
+        - require_gpt_to_include_all_keywords_naturally_with_semantics_preserved
+        - enforce_parabreak_every_two_sentences_by_lang_delimiters
+        - force_gpt_to_render_vertical_keyword_table
+        - require_gpt_to_pair_glossary_lock_terms_with_original_and_translation_and_boldify
+        - force_gpt_to_output_sections_in_order_h1_title_keyword_table_intro
+      params:
+        min_keywords_per_set: 5
+
+  extended_markdown/keyword_map_strict_v1:
+    description: "英語出力時の対表記抑止・回復手順強化"
+    requires:
+      core: "yacl.version >= 1.1"
+    apply:
+      use_logic_flags:
+        - force_gpt_to_translate_to_inferred_locale_when_lang_auto
+        - require_gpt_to_open_with_experiential_scene_element
+        - require_gpt_to_define_keyword_categories_as_logical_facets
+        - require_gpt_to_include_all_keywords_naturally_with_semantics_preserved
+        - enforce_parabreak_every_two_sentences_by_lang_delimiters
+        - force_gpt_to_render_vertical_keyword_table
+        - force_gpt_to_output_sections_in_order_h1_title_keyword_table_intro
+      overrides:
+        logic_flags:
+          require_gpt_to_pair_glossary_lock_terms_with_original_and_translation_and_boldify:
+            en_output_behavior: "suppress"
+          failure_recovery:
+            table_rendering:
+              retry_order: ["vertical-strict","vertical-relaxed","horizontal"]
+              vertical_relaxed_min_terms_each: 4

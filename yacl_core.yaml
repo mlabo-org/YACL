@@ -1,0 +1,87 @@
+yacl:
+  version: 1.1
+  lang: auto
+
+  params:
+    min_keywords_per_set: 5
+    glossary_lock_ja:
+      "EVP": "価値提案（EVP）"
+      "KPI": "成果指標（KPI）"
+
+  flags:
+    translate_to_inferred_locale: true
+    prohibit_html_tags: true
+    render_keyword_table_vertical: true
+    boldify__all_keywords__strict: true
+    enforce_parabreak_every__2_sentences: true
+    opening_style__experiential__required: true
+    require_all_keywords_in__introduction: true
+
+  modes:
+    extended_markdown:
+      logic_flags:
+        precedence: logic_flags_override_generic_flags
+
+        force_gpt_to_translate_to_inferred_locale_when_lang_auto:
+          strategy: majority_charcount
+          cultural_term_override: true
+          tiebreaker: prefer_japanese_when_mixed
+
+        require_gpt_to_open_with_experiential_scene_element:
+          min_experiential_sentences: 1
+          must_include_sensory_or_action_cue: true
+
+        require_gpt_to_include_all_keywords_naturally_with_semantics_preserved:
+          allow_inflection_and_compounds: true
+          forbid_semantic_shift: true
+          forbid_plain_list_dump_in_intro: true
+
+        require_gpt_to_define_keyword_categories_as_logical_facets:
+          examples_allowed: ["メインキーワード","共起語","関連ワード"]
+          min_categories: 3
+          min_terms_per_category: ${params.min_keywords_per_set}
+
+        enforce_parabreak_every_two_sentences_by_lang_delimiters:
+          ja_sentence_delimiter: "。"
+          en_sentence_delimiter: "."
+          treat_semicolon_as_inline: true
+
+        require_gpt_to_pair_glossary_lock_terms_with_original_and_translation_and_boldify:
+          pair_original_and_translation: true
+          boldify_all_locked_terms: true
+          en_output_behavior: "pair_with_ja"
+
+        force_gpt_to_render_vertical_keyword_table:
+          rows: 3
+          min_terms_each: ${params.min_keywords_per_set}
+
+        force_gpt_to_output_sections_in_order_h1_title_keyword_table_intro: true
+
+        failure_recovery:
+          table_rendering:
+            retry_order: ["vertical-strict","vertical-relaxed","horizontal"]
+            vertical_relaxed_min_terms_each: 4
+          language_flow:
+            retry_if_lang_mismatch: true
+            final_force_to_inferred_locale: true
+
+  contract:
+    format: extended_markdown_source
+    sections_order__h1_title__keyword_table__intro: true
+    rules:
+      h1_title__display_topic_name__inferred_locale: true
+      keyword_table__3_categories__>=5_terms_each: true
+      intro__include_all_keywords__natural_flow: true
+
+  assertions:
+    h1_count__==1: true
+    table_count__==1: true
+    row_count_in_first_table__==3: true
+    all_rows_have_at_least__${params.min_keywords_per_set}_terms: true
+    no_html_tags_in_output: true
+    lang__==inferred_locale: true
+
+  notes:
+    deprecation_plan_for_generic_flags: >
+      従来の flags は後方互換のため当面維持するが、logic_flags への段階的吸収を前提とする。
+      衝突時は logic_flags を優先し、将来的に従来 flags を削除する。

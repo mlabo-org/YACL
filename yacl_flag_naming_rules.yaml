@@ -1,0 +1,26 @@
+principles:
+  - "命名＝挙動（behavior-equals-name）"
+  - "副作用を隠さない（no hidden side-effects）"
+  - "名詞より動詞（prefer action-verbs）"
+  - "否定系は避ける（avoid negatives unless necessary）"
+
+good_examples:
+  - force_gpt_to_render_vertical_keyword_table
+  - require_gpt_to_open_with_experiential_scene_element
+  - enforce_parabreak_every_two_sentences_by_lang_delimiters
+  - require_gpt_to_include_all_keywords_naturally_with_semantics_preserved
+
+bad_examples:
+  - beautify_text
+  - more_seo
+  - make_it_better
+  - no_list
+
+lint_rules:
+  snake_case_only: true
+  allow_numbers: false
+  min_length: 8
+  required_prefixes:
+    - force_gpt_to_
+    - require_gpt_to_
+    - enforce_
