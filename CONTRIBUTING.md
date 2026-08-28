@@ -1,6 +1,5 @@
-# Contributing
+# Contributions
 
-- Follow philosophy and naming rules.
-- Use behavior-equals-name flags.
-- Keep plan → write → compile separation when adding modes.
-- PRs should include rationale and examples.
+This repository is an archived historical artifact and is not accepting contributions, pull requests, support requests, modification requests, or compatibility fixes.
+
+The source remains available under the MIT License, so independent use and modification do not require a contribution to this repository.

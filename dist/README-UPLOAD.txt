@@ -1,5 +1,8 @@
 YACL Single File — ChatGPT Global Chat Upload Guide
 
+ARCHIVED 2025 INSTRUCTIONS
+Retained for historical reference only. YACL is no longer maintained or supported, and compatibility with current models is not guaranteed.
+
 Use the .txt when uploading to ChatGPT. The .yaml may be rejected by the UI.
 
 Recommended file to upload:

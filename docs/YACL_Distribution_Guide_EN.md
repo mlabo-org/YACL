@@ -1,6 +1,8 @@
 # YACL Distribution Guide (For End Users)
 Last updated: 2025-08-12
 
+> **Archived historical guide.** This document records the original 2025 usage instructions. YACL is no longer maintained or supported, and these instructions are not a compatibility guarantee for current ChatGPT models or interfaces.
+
 This document explains **how to use YACL (Yet Another Control Language)** for first-time users without requiring deep technical knowledge.  
 Internal implementation terms intended for developers (e.g., `extended_markdown`, `compile`) are **replaced with user-friendly names** where possible.
 
@@ -172,9 +174,8 @@ Every output is automatically checked against the contract.
 
 ---
 
-## 10. License & Credit
-- **MIT License with YACL Custom Clauses**  
-- Public use requires explicit credit to **"YACL: Yet Another Control Language"** and **Makoto Suzuki**.
+## 10. License
+- **MIT License** — see the repository's `LICENSE` file.
 
 ---
 
@@ -188,4 +189,4 @@ Every output is automatically checked against the contract.
 
 ---
 
-That's it. Upload the `.txt` file, specify a Template ID, and you'll be using YACL immediately.
+The steps above are preserved as the original 2025 usage record.

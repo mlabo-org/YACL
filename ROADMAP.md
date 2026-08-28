@@ -1,7 +1,5 @@
-# ROADMAP
+# Historical release record
 
-## 0.1.0 (Initial OSS cut)
-- Add: core/templates/flag rules
-- Add: README, philosophy, LICENSE, ROADMAP, CONTRIBUTING
-- Add: /dist & /docs
-- Status: Public repo creation
+YACL's 2025 package included the core rules, templates, flag-naming rules, philosophy, license, distribution files, and Japanese and English guides.
+
+The project is no longer maintained. There is no active roadmap and no further releases or compatibility work are planned.

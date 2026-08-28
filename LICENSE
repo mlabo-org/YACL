@@ -1,4 +1,4 @@
-MIT License with YACL Custom Clauses
+MIT License
 
 Copyright (c) 2025 Makoto Suzuki
 
@@ -9,33 +9,13 @@ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
 
-1. Inclusion Requirement
-   The above copyright notice and this permission notice shall be included in all
-   copies or substantial portions of the Software.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-2. Attribution Requirement
-   Any public use, redistribution, or derivative work must clearly credit
-   "YACL: Yet Another Control Language" and the author, Makoto Suzuki,
-   in documentation, README files, or equivalent attribution locations.
-
-3. No Unauthorized Redistribution
-   Redistribution of this work in part or in whole is prohibited without explicit
-   written permission from the author, unless the redistribution is under identical
-   terms to this license and includes this exact file.
-
-4. Mode & Structure Integrity
-   Any derivative implementation must preserve the core operational structure of YACL
-   (e.g., yacl_core.yaml syntax definition, yacl_flag_naming_rules.yaml conventions,
-   and the intended flag-driven / YAML-gated control flow) unless explicitly permitted
-   by the author.
-
-5. Non-Warranty
-   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
-   INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
-   PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
-   HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-   OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-   SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
----
-Timestamp of license creation: 2025-08-11 (UTC+09:00 JST)
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

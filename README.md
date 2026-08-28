@@ -1,22 +1,34 @@
 # YACL — Yet Another Control Language
 
-YACL is a lightweight control language to stabilize LLM output via **Flag-Driven, YAML-Gated** rules.
+> **Archived research artifact (2025).** YACL preserves a GPT-4o-era experiment in flag-driven, YAML-gated control of LLM output. It is no longer maintained, is not a current implementation, and carries no compatibility guarantee for current models. The author's current systems have moved to natural-language contracts.
+>
+> No support, issue handling, pull requests, modification requests, or compatibility fixes are accepted. The quickstarts, distribution guides, and files under `dist/` are retained as historical documentation, not as a currently supported installation route.
 
-## Features
-- **Flag-Driven, YAML-Gated** instruction + validation
-- **Mode separation** for clarity (plan / write / compile concepts)
-- **Contract + assertions** to auto-check output
-- **Template system** for quick presets
+YACL was designed as a lightweight control language for stabilizing LLM output through **Flag-Driven, YAML-Gated** rules.
 
-## Quickstart (ChatGPT)
-1) Upload `/dist/yacl_single-2025-08-12.txt` to the chat  
-2) Say: “Apply **extended_markdown/keyword_map_v1** to all responses in this session.”
+## Historical features
 
-## Repository Layout
+- **Flag-Driven, YAML-Gated** instructions and validation
+- **Mode separation** for plan, write, and compile concepts
+- **Contracts and assertions** for checking output
+- **Templates** for reusable presets
+
+## Historical repository set
+
+These repositories form one historical record:
+
+- **[structci-core](https://github.com/mlabo-org/structci-core)** — StructCI v8.5 reference implementation
+- **[YACL](https://github.com/mlabo-org/YACL)** — control-language, contract-format, and distribution artifacts (this repository)
+- **[structci-proof](https://github.com/mlabo-org/structci-proof)** — authorship, provenance, and prior-art record
+
+## Repository layout
+
 - `yacl_core.yaml`, `yacl_templates.yaml`, `yacl_flag_naming_rules.yaml`
-- `LICENSE`, `README.md`, `philosophy.md`, `CONTRIBUTING.md`, `ROADMAP.md`
-- `/dist` single-file distribution (txt + yaml)
-- `/docs` distribution guides (JA/EN)
+- `philosophy.md`
+- `dist/` — original single-file distribution artifacts
+- `docs/` — original Japanese and English distribution guides
+- `CONTRIBUTING.md`, `ROADMAP.md` — archival status records
 
 ## License
-MIT License with YACL Custom Clauses (see LICENSE)
+
+MIT License. See [LICENSE](LICENSE).
